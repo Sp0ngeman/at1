@@ -1,7 +1,9 @@
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('eduprod/', include('eduprod.urls')),
+    path("admin/", admin.site.urls),
+    path('', include('card.urls', namespace='card')),
+    path('accounts/', include('accounts.urls', namespace='accounts')),
 ]

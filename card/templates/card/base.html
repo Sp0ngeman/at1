@@ -1,0 +1,30 @@
+{% if user.is_authenticated %}
+    <p>Hi {{ user.username }}!</p>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form> 
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wanago Assessment</title>
+    <link rel="stylesheet" href="/card/static/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>FlashCraft</h1>
+        {% include "card/navigation.html" %}
+
+    </header>
+    <main>
+        {% block content %}
+            <h2>Welcome to your Flashcards app!</h2>
+        {% endblock content %}
+    </main>
+</body>
+
+</html>
