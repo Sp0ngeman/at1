@@ -1,7 +1,5 @@
-
-from django.urls import path, include
+from django.urls import path
 from . import views
-app_name='card'
 
 urlpatterns = [
     path(
@@ -24,10 +22,5 @@ urlpatterns = [
         views.BoxView.as_view(),
         name="box"
     ),
-        path(
-            '', 
-            include(('card.urls', 'card'))
-    ),
-
 ]
 
