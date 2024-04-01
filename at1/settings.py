@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'card.apps.CardsConfig',
     'django.contrib.humanize',
-
 ]
 
 MIDDLEWARE = [
