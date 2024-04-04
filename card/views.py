@@ -43,3 +43,4 @@ class BoxView(CardListView):
             card.move(form.cleaned_data["solved"])
 
         return redirect(request.META.get("HTTP_REFERER"))
+    
